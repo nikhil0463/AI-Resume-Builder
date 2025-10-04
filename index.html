@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder | Powered by Gemini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Resume Builder</h1>
+            <p>Optimize your resume for any job description using Google's Gemini API.</p>
+        </header>
+
+        <section class="api-key-section">
+            <h2>Step 1: Enter Your Google Gemini API Key</h2>
+            <p>Your key is not stored. It's used only for this session. <a href="https://aistudio.google.com/" target="_blank">Get your API Key here.</a></p>
+            <input type="password" id="apiKey" placeholder="Enter your Google Gemini API Key">
+        </section>
+
+        <main>
+            <section class="input-section">
+                <h2>Step 2: Provide Your Resume & Job Details</h2>
+                <label for="currentResume">Your Current Resume Text:</label>
+                <textarea id="currentResume" rows="15" placeholder="Paste your entire current resume here..."></textarea>
+
+                <label for="jobTitle">Target Job Title:</label>
+                <input type="text" id="jobTitle" placeholder="e.g., Senior Data Engineer, Product Manager">
+
+                <label for="jobDescription">Target Job Description:</label>
+                <textarea id="jobDescription" rows="15" placeholder="Paste the full job description here..."></textarea>
+            </section>
+            
+            <section class="actions">
+                <button id="optimize-btn">Optimize My Resume</button>
+            </section>
+        </main>
+        
+        <section id="results-section">
+            <h2>Optimized Resume & Analysis</h2>
+            <div id="loader" class="loader" style="display: none;"></div>
+            <div id="results">
+                <p class="placeholder">Your optimized resume and analysis will appear here...</p>
+                <div class="result-card" id="tailoredResumeCard" style="display: none;">
+                    <h3>Tailored Resume</h3>
+                    <pre id="tailoredResumeContent"></pre>
+                    <button id="copyResumeBtn" class="secondary-btn">Copy Tailored Resume</button>
+                </div>
+                <div class="result-card" id="atsScoreCard" style="display: none;">
+                    <h3>ATS Match Score</h3>
+                    <p id="atsScore"></p>
+                </div>
+                <div class="result-card" id="scoreReasoningCard" style="display: none;">
+                    <h3>Score Reasoning</h3>
+                    <p id="scoreReasoning"></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
