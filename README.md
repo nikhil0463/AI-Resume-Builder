@@ -91,15 +91,8 @@ Or simply open `index.html` in your browser if you prefer; just be aware of pote
 
 - The app performs all requests from your browser and does not store the API key or your resume. However, your resume text and API key are sent to Google's APIs (per Google's terms and billing). Do not use production or sensitive credentials you can't afford to expose.
 
-## License
-
-This project is provided under the MIT License. See the LICENSE file (or add one) if you want to include licensing metadata.
 
 ## Acknowledgements
 
 - Built as a simple hobby project to demonstrate how to pair a resume with a generative model for ATS optimization.
 
-
-
-If you want any of those, tell me which and I'll implement them.
-AI Resume Builder
